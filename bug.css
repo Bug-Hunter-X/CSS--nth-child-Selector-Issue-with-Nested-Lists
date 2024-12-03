@@ -1,0 +1,13 @@
+The following CSS code snippet attempts to style list items using the `:nth-child` pseudo-class, but only affects every other item, not the intended items.
+
+```css
+li:nth-child(odd) {
+  background-color: lightblue;
+}
+
+li:nth-child(even) {
+  background-color: lightcoral;
+}
+```
+
+The issue lies in the unexpected behavior when combined with nested lists. The selector counts items from the beginning of each parent list, restarting the count with each nested `ul` or `ol` element.
