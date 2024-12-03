@@ -1,0 +1,13 @@
+To correctly style the list items regardless of nesting, use the `:nth-of-type` pseudo-class. This selector counts only elements of a specific type, preventing the counter reset that occurs with `:nth-child`. 
+
+```css
+li:nth-of-type(odd) {
+  background-color: lightblue;
+}
+
+li:nth-of-type(even) {
+  background-color: lightcoral;
+}
+```
+
+This ensures that the styles apply consistently to odd and even list items, even within nested structures.
